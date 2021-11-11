@@ -140,9 +140,20 @@ LOGIN_REDIRECT_URL = '/'
 # Secret key:145cdf8cb8e41edaf4191b7988aad4a0
 # Sites:->Chosen sites:localhost:8000
 
+##########
+# VK APPLICATIONS
+# Sign with Vk:config
+# Provider:VK
+# Name:vk
+# Client id:7996194
+# Secret key:W6Zy900zL8UUYf5Gtk27
+# key:5cf4e59a5cf4e59a5cf4e59a5e5c8ee6b855cf45cf4e59a3d7dc2678351a2656284717f
+# LOGIN_REDIRECT_URL = 'sign'
+# Sites:->Chosen sites:localhost:8000
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
