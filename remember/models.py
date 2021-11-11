@@ -12,4 +12,5 @@ class RememberPlaceFB(models.Model):
 
 class RememberPlaceVk(models.Model):
     place = models.CharField(verbose_name='Address Vk', max_length=5000, db_index=True, blank=False, unique=True)
+    comment = models.CharField(verbose_name='Comment Vk', max_length=5000, db_index=True, blank=False, unique=False)
 
