@@ -4,3 +4,8 @@ from django.views.generic import View
 from django.shortcuts import render
 # Create your views here.
 
+
+class LoginView(View):
+    """The class responsible for the output of the login.html file"""
+    def get(self, request):
+        return render(request, 'login.html')
