@@ -16,7 +16,7 @@ class TestLoginView(TestCase):
         self.assertEqual(200,response.status_code)
 
 
-class SignView(TestCase):
+class TestSignView(TestCase):
     def client(self):
         self.client = Client()
 
