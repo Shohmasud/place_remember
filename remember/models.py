@@ -8,3 +8,6 @@ class RememberPlaceFB(models.Model):
     class Meta:
         verbose_name = 'Remember_Place Facebook-[Autofill]'
         ordering = ['id']
+
+
+class RememberPlaceVk(models.Model):
