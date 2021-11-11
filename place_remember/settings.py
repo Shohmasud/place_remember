@@ -131,6 +131,17 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
+##########
+# FACEBOOK APPLICATIONS
+# Sign with Facebook:config
+# Provider:Facebook
+# Name:facebook
+# Client id:443985803810665
+# Secret key:145cdf8cb8e41edaf4191b7988aad4a0
+# Sites:->Chosen sites:localhost:8000
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
