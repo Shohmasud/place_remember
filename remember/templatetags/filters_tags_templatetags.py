@@ -43,6 +43,19 @@ def verify_user(value):
             except:
                 return "You don't have any memories"
 
+#
+@register.simple_tag
+def place():
+    dict_user_name = dict()
+
+    for objects in users_modelAll:
+        for data in objects.objects.all():
+            if data.user == first_name:
+                for tuple_obj in data.releted_place.values_list():
+                    dict_user_name[tuple_obj[1]] = [tuple_obj[2]]
+
+    return dict_user_name
+
 
 #
 @register.simple_tag
