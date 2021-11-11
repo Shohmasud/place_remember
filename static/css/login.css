@@ -10,3 +10,11 @@
     width: 100%;
     background: dodgerblue;
 }
+
+.name_site{
+    font-size:20px;
+    font-weight:bolder;
+    color: snow;
+    padding-top:14px;
+    padding-left:3px;
+}
