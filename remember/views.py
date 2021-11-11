@@ -55,5 +55,4 @@ class FormPostView(View):
                 return render(request, 'sign.html', {'form': form})
             except:
                 return render(request, 'sign.html', {'form': form})
-
         return render(request, 'sign.html', {'form': form})
