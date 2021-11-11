@@ -17,3 +17,5 @@ class RememberPlaceVk(models.Model):
     class Meta:
         verbose_name = 'Remember Vk-[Autofill]'
         ordering = ['id']
+
+class UserLogFB(models.Model):
