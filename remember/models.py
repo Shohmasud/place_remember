@@ -18,6 +18,11 @@ class RememberPlaceVk(models.Model):
         verbose_name = 'Remember Vk-[Autofill]'
         ordering = ['id']
 
+
 class UserLogFB(models.Model):
     user = models.CharField(verbose_name='Fullname Facebook', max_length=1000, db_index=True, unique=True, blank=False)
     releted_place = models.ManyToManyField(RememberPlaceFB, blank=True)
+
+    class Meta:
+        verbose_name = 'User Facebook-[Autofill]'
+        ordering = ['id']
