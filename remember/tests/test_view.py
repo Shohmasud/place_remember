@@ -14,3 +14,14 @@ class TestLoginView(TestCase):
         response = self.client.get('/login/')
         print(response.status_code)
         self.assertEqual(200,response.status_code)
+
+
+class SignView(TestCase):
+    def client(self):
+        self.client = Client()
+
+    def test_get(self):
+        response = self.client.post('/sign/social/',{'form':RememberForm()})
+        print(response.status_code)
+        self.assertEqual(200,response.status_code)
+
