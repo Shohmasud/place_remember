@@ -16,3 +16,14 @@
     padding-top:14px;
     padding-left:3px;
 }
+
+.div_avatar{
+    margin-left:0.5%;
+    margin-top:3%;
+}
+.p_name{
+    font-weight:normal;
+}
+.div_add_allflex{
+    display: flex;
+}
