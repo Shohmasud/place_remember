@@ -27,3 +27,21 @@
 .div_add_allflex{
     display: flex;
 }
+
+.p_empty_full{
+    font-size:28px;
+    color: gray;
+    margin-left:80%;
+    width:100%;
+}
+#example_2_1,#example_2_2{
+    width: 250%;
+    height:40px;
+    background:dodgerblue;
+    border:1px solid white;
+    color: white;
+}
+.div_add_data{
+    margin-left:15%;
+    margin-top:5%;
+}
