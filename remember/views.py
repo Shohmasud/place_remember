@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.views.generic import View
 from django.shortcuts import render
 from remember.forms import RememberForm
+import re
 # Create your views here.
 
 
@@ -23,4 +24,12 @@ class FormPostView(View):
      on the necessary models (tables of social networks)"""
 
     def post(self, request, pk):
-    #
+    #This block we get the user's data and check whether they belong to any provider
+        provider = None
+        form = RememberForm(request.POST)
+        if form.is_valid():
+            for obj in User.objects.all():
+                if obj.first_name == pk:
+                    provider = obj.username
+            matches = re.findall('id[1-9]*', provider)
+
