@@ -156,4 +156,6 @@ LOGIN_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [BASE_DIR,'static']
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
