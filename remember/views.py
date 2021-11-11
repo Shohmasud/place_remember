@@ -19,12 +19,13 @@ class SignView(View):
         form = RememberForm()
         return render(request, 'sign.html',{'form':form})
 
+
 class FormPostView(View):
     """The class is responsible for receiving processing and storing data
      on the necessary models (tables of social networks)"""
 
     def post(self, request, pk):
-    #This block we get the user's data and check whether they belong to any provider
+        # This block we get the user's data and check whether they belong to any provider
         provider = None
         form = RememberForm(request.POST)
         if form.is_valid():
@@ -32,4 +33,16 @@ class FormPostView(View):
                 if obj.first_name == pk:
                     provider = obj.username
             matches = re.findall('id[1-9]*', provider)
+
+            # If the length of the username is == 0.Then Facebook's data (place,comment) refers
+            # to the provider Facebook and is stored in the facebook model.
+            if len(matches) == 0:
+                try:
+                    user = UserLogFB.objects.get(user=pk)
+                    save_rememberFb = RememberPlaceFB.objects.create(place=form.cleaned_data['location'],comment=form.cleaned_data['text_comment'])
+                    save_rememberFb.save()
+                    user.releted_place.add(save_rememberFb.pk)
+                    return render(request, 'sign.html', {'form': form})
+                except:
+                    return render(request, 'sign.html', {'form': form})
 
