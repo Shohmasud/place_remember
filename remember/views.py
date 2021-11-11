@@ -19,4 +19,8 @@ class SignView(View):
         return render(request, 'sign.html',{'form':form})
 
 class FormPostView(View):
-    """"""
+    """The class is responsible for receiving processing and storing data
+     on the necessary models (tables of social networks)"""
+
+    def post(self, request, pk):
+    #
