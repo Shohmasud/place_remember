@@ -45,6 +45,18 @@
                 ADD PLACE
             </button>
         </div>
+        <div id="div_form">
+            <main role="main" class="col-sm-6 ml-sm-auto col-md-6 pt-3">
+                {% tag_pk as result %}
+                <form method="POST" action="{% url 'post_form_facebook' result %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form }}
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="button_save">SAVE</button>
+                </form>
+            </main>
+        </div>
     </section>
 {% endblock %}
 </body>
