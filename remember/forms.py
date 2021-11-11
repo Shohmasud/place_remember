@@ -12,3 +12,6 @@ class RememberForm(forms.Form):
                'placeholder': 'Say Something...'},
     ))
 
+    class Meta:
+        model = RememberPlaceFB
+        fields = '__all__'
