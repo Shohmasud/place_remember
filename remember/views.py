@@ -24,6 +24,11 @@ class FormPostView(View):
     """The class is responsible for receiving processing and storing data
      on the necessary models (tables of social networks)"""
 
+    # If the Google API is working, then we check if such an address exists and then save it in the database
+    # place = form.cleaned_data['location']
+    # location = GoogleV3(api_key="AIzaSyB2yNCh0-tWer7yJon3MkyEaM1W-GrR8gE").geocode(place)
+    # Create your views here.
+
     def post(self, request, pk):
         # This block we get the user's data and check whether they belong to any provider
         provider = None
