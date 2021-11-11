@@ -18,3 +18,15 @@
     padding-top:14px;
     padding-left:3px;
 }
+
+.div_h4_log{
+    text-align:center;
+    margin-top:5%;
+
+}
+.h4_log{
+    font-weight:bolder;
+    font-size:15px;
+    color:black;
+    margin-bottom:0.7%;
+}
