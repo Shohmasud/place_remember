@@ -27,7 +27,10 @@
 {% block sign %}
     <section class="sign">
         <div class="div_add_allflex">
-
+            <div class="div_avatar">
+                <img style="height: 185px;width:185px;" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="">
+                <p class="p_name">{{ user.first_name }}</p>
+            </div>
         </div>
     </section>
 
