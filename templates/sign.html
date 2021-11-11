@@ -66,6 +66,24 @@
             </div>
         </div>
     </section>
+    <section class="list_data_user">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="div_list">
+                        <h4 class="h4_list">List countries and cities</h4>
+                        {% place as dict_place %}
+                        {% for k,v in dict_place.items %}
+                            <div class="div_border_place">
+                                <h4 class="h4_list_place_comment">{{ k }}</h4>
+                                <p class="p_list_place_comment">{{ v.0 }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 </body>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2yNCh0-tWer7yJon3MkyEaM1W-GrR8gE&libraries=places&callback=initMap"></script>
