@@ -5,7 +5,7 @@ urlpatterns = [
     #http://localhost:8000/path/
     path('admin/', admin.site.urls),
     path(r'^accounts/',include('allauth.urls')),
-    path('login/', LoginView.as_view()),
+    path('login/', LoginView.as_view(),name='login'),
     path('sign/social/',SignView.as_view(),name='sign'),
     path('post/form/<str:pk>/', FormPostView.as_view(), name='post_form_facebook'),
 ]
