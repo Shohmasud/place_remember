@@ -1,6 +1,6 @@
 {% load static %}
-{% load socialaccount %}
 {% load filters_tags_templatetags %}
+{% load socialaccount %}
 {% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
@@ -37,17 +37,17 @@
                                  src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="">
                             <p class="p_name">{{ user.first_name }}</p>
                         </div>
-                    </div>
-                    <div class="div_add_data">
-                        <p class="p_empty_full">{{ user.first_name |verify_user }}</p>
-                        <button type="button" class="btn btn-primary" id="example_2_1"
-                                onclick="document.getElementById('div_form').style.display='none'; document.getElementById('example_2_1').style.display='none'; document.getElementById('example_2_2').style.display='block';"
-                                style="display:none;">ADD PLACE
-                        </button>
-                        <button id="example_2_2"
-                                onclick=" document.getElementById('div_form').style.display='block'; document.getElementById('example_2_2').style.display='none'; document.getElementById('example_2_1').style.display='block';">
-                            ADD PLACE
-                        </button>
+                        <div class="div_add_data">
+                            <p class="p_empty_full">{{ user.first_name |verify_user }}</p>
+                            <button type="button" class="btn btn-primary" id="example_2_1"
+                                    onclick="document.getElementById('div_form').style.display='none'; document.getElementById('example_2_1').style.display='none'; document.getElementById('example_2_2').style.display='block';"
+                                    style="display:none;">ADD PLACE
+                            </button>
+                            <button id="example_2_2"
+                                    onclick=" document.getElementById('div_form').style.display='block'; document.getElementById('example_2_2').style.display='none'; document.getElementById('example_2_1').style.display='block';">
+                                ADD PLACE
+                            </button>
+                        </div>
                     </div>
                     <div id="div_form">
                         <main role="main" class="col-sm-6 ml-sm-auto col-md-6 pt-3">
