@@ -32,8 +32,18 @@
                 <p class="p_name">{{ user.first_name }}</p>
             </div>
         </div>
+        <div class="div_add_data">
+            <p class="p_empty_full">{{ user.first_name |verify_user }}</p>
+            <button type="button" class="btn btn-primary" id="example_2_1"
+                    onclick="document.getElementById('div_form').style.display='none'; document.getElementById('example_2_1').style.display='none'; document.getElementById('example_2_2').style.display='block';"
+                    style="display:none;">ADD PLACE
+            </button>
+            <button id="example_2_2"
+                    onclick=" document.getElementById('div_form').style.display='block'; document.getElementById('example_2_2').style.display='none'; document.getElementById('example_2_1').style.display='block';">
+                ADD PLACE
+            </button>
+        </div>
     </section>
-
 {% endblock %}
 </body>
 </html>
