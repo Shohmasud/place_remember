@@ -26,3 +26,6 @@ class UserLogFB(models.Model):
     class Meta:
         verbose_name = 'User Facebook-[Autofill]'
         ordering = ['id']
+
+
+class UserLogVk(models.Model):
