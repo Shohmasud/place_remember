@@ -8,3 +8,9 @@ from django.test import Client
 csrf_client = Client(enforce_csrf_checks=True)
 
 class TestLoginView(TestCase):
+    def client(self):
+        self.client = Client()
+    def test_get(self):
+        response = self.client.get('/login/')
+        print(response.status_code)
+        self.assertEqual(200,response.status_code)
