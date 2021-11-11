@@ -46,3 +46,14 @@ class FormPostView(View):
                 except:
                     return render(request, 'sign.html', {'form': form})
 
+            # Otherwise, the data refers(place, comment) to the VK provider and is stored in the Vk model
+            try:
+                user = UserLogVk.objects.get(user=pk)
+                save_rememberVk = RememberPlaceVk.objects.create(place=form.cleaned_data['location'],comment=form.cleaned_data['text_comment'])
+                save_rememberVk.save()
+                user.releted_place.add(save_rememberVk.pk)
+                return render(request, 'sign.html', {'form': form})
+            except:
+                return render(request, 'sign.html', {'form': form})
+
+        return render(request, 'sign.html', {'form': form})
