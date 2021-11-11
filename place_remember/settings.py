@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'project',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
+        'HOST': 'apirest',
         'PORT': '5432',
     },
 }
@@ -136,8 +136,8 @@ LOGIN_REDIRECT_URL = 'sign'
 # Sign with Facebook:config
 # Provider:Facebook
 # Name:facebook
-# Client id:443985803810665
-# Secret key:145cdf8cb8e41edaf4191b7988aad4a0
+# Client id:277055740867723
+# Secret key:bf11349ac8221dd8c2f89699cd749458
 # Sites:->Chosen sites:localhost:8000
 
 ##########
