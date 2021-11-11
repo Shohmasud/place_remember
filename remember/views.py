@@ -16,4 +16,7 @@ class SignView(View):
     """The class responsible for the output of the sign.html file"""
     def get(self, request):
         form = RememberForm()
-        return render(request, 'sign.html', {'form': form})
+        return render(request, 'sign.html',{'form':form})
+
+class FormPostView(View):
+    """"""
