@@ -4,3 +4,9 @@
     margin-left:0;
     margin-right:0;
 }
+
+.div_header{
+    height:40px;
+    width: 100%;
+    background: dodgerblue;
+}
