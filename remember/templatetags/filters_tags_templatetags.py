@@ -43,3 +43,8 @@ def verify_user(value):
             except:
                 return "You don't have any memories"
 
+
+#
+@register.simple_tag
+def tag_pk():
+    return first_name
