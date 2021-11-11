@@ -17,3 +17,8 @@ class Admin_UserVk(admin.ModelAdmin):
     search_fields = ['id','user']
 admin.site.register(UserLogVk,Admin_UserVk)
 
+class Admin_UserFB(admin.ModelAdmin):
+    list_display = ('id', 'user')
+    search_fields = ['id','user']
+admin.site.register(UserLogFB,Admin_UserFB)
+
