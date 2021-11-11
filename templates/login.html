@@ -36,6 +36,13 @@
                             <h4 class="h4_log">REMEMBER PLACE</h4>
                             <p class="p_text">Web-application with which people can store their impressions of the places they visit</p>
                         </div>
+                        <div class="div_login_facebook_vk">
+                            <h4 class="h4_sign">SIGN WHITH</h4>
+                        </div>
+                        <div class="div_social">
+                            <a href="{% provider_login_url 'facebook' method='js_sdk'%}" class="btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f fb_icon"></i></a>
+                            <a href="{% provider_login_url 'vk' method='js_sdk'%}" class="btn-floating btn-lg btn-vk" type="button" role="button"><i class="fab fa-vk vk_icon"></i></a>
+                        </div>
                     </div>
             </div>
         </div>
