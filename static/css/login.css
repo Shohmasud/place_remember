@@ -43,3 +43,22 @@
     color:darkgrey;
     margin-bottom:0.7%;
 }
+
+.div_login_facebook_vk{
+    text-align:center;
+}
+.fb_icon{
+    background:dodgerblue;
+    padding:5px 25px 5px 25px ;
+    color: white;
+}
+
+.vk_icon{
+    background:dodgerblue;
+    padding:5px 20px 5px 20px ;
+    color: white;
+    margin-left:0.5%;
+}
+.div_social{
+    text-align:center;
+}
